@@ -1,17 +1,18 @@
 import {StyleSheet} from 'react-native';
+import scaling from '../../config/scaling';
 
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: '#FFC700',
-    flex: 1,
+    flex: scaling(1),
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    fontSize: 32,
+    fontSize: scaling(32),
     color: '#020202',
-    marginTop: 38,
+    marginTop: scaling(38),
     fontFamily: 'Poppins-Medium',
   },
 });
