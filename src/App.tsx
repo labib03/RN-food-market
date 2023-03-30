@@ -1,12 +1,12 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
 import {SplashScreen} from './pages';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <NavigationContainer>
       <SplashScreen />
-    </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
