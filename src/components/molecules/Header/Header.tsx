@@ -11,9 +11,10 @@ type Props = {
   title: string;
   subtitle: string;
   isCanBack?: boolean;
+  backTo?: string;
 };
 
-const Header: React.FC<Props> = ({title, subtitle, isCanBack}) => {
+const Header: React.FC<Props> = ({title, subtitle, isCanBack, backTo}) => {
   const navigation =
     useNavigation<NativeStackScreenProps<RootStackParamList>['navigation']>();
   return (
@@ -22,7 +23,7 @@ const Header: React.FC<Props> = ({title, subtitle, isCanBack}) => {
         {isCanBack && (
           <Pressable
             style={styles.back}
-            onPress={() => navigation.navigate('SignIn')}>
+            onPress={() => navigation.navigate(backTo)}>
             <BackIcon />
           </Pressable>
         )}

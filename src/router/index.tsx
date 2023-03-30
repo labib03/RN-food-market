@@ -3,12 +3,13 @@ import {
   NativeStackNavigationOptions,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import {SignIn, SignUp, SplashScreen} from 'pages/index';
+import {SignIn, SignUp, SignUpAddress, SplashScreen} from 'pages/index';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  SignUpAddress: undefined;
 };
 
 const options: NativeStackNavigationOptions = {
@@ -28,6 +29,11 @@ const Router = () => {
       />
       <Stack.Screen name="SignIn" component={SignIn} options={options} />
       <Stack.Screen name="SignUp" component={SignUp} options={options} />
+      <Stack.Screen
+        name="SignUpAddress"
+        component={SignUpAddress}
+        options={options}
+      />
     </Stack.Navigator>
   );
 };
