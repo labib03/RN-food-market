@@ -1,13 +1,20 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SignIn, SplashScreen} from 'pages/index';
+import {
+  NativeStackNavigationOptions,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
+import {SignIn, SignUp, SplashScreen} from 'pages/index';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
   SignIn: undefined;
+  SignUp: undefined;
 };
 
-const options = {headerShown: false, headerTransparent: true};
+const options: NativeStackNavigationOptions = {
+  headerShown: false,
+  headerTransparent: true,
+};
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -20,6 +27,7 @@ const Router = () => {
         options={options}
       />
       <Stack.Screen name="SignIn" component={SignIn} options={options} />
+      <Stack.Screen name="SignUp" component={SignUp} options={options} />
     </Stack.Navigator>
   );
 };

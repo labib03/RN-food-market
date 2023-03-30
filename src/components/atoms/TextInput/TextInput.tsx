@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: scaling(16),
     letterSpacing: 0.5,
-    marginBottom: scaling(6),
+    marginBottom: scaling(4),
   },
   textInput: {
     borderWidth: 0.4,

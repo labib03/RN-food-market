@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import {StatusBar, Text, View} from 'react-native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {SplashScreenLogo} from '../../assets';
 import styles from './styles';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from 'router/*';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SplashScreen'>;

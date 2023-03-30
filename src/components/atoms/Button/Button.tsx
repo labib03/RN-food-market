@@ -7,10 +7,11 @@ type Props = {
   color: string | undefined;
   label: string | undefined;
   isSecondary?: boolean;
+  onPress: () => void;
 };
 
 const Button: React.FC<Props> = props => {
-  const {color, label, isSecondary} = props;
+  const {color, label, isSecondary, onPress} = props;
   return (
     <Pressable
       style={({pressed}) => [
@@ -19,10 +20,11 @@ const Button: React.FC<Props> = props => {
             ? color
             : isSecondary
             ? colors.black
-            : colors.light,
+            : colors.button.pressed,
         },
         styles.button,
-      ]}>
+      ]}
+      onPress={onPress}>
       <Text
         style={[
           styles.text,

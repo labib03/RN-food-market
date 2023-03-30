@@ -1,5 +1,5 @@
+import scaling from 'config/scaling';
 import {StyleSheet} from 'react-native';
-import scaling from '../../config/scaling';
 import colors from 'utils/styles/colors';
 
 const styles = StyleSheet.create({
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    gap: scaling(20),
+    gap: scaling(16),
     backgroundColor: colors.white,
     marginTop: scaling(20),
     paddingVertical: scaling(26),
