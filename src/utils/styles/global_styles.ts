@@ -14,6 +14,18 @@ const GlobalStyle = StyleSheet.create({
     paddingVertical: scaling(22),
     paddingHorizontal: scaling(24),
   },
+  Medium: {
+    fontFamily: 'Poppins-Medium',
+  },
+  Reguler: {
+    fontFamily: 'Poppins-Reguler',
+  },
+  Light: {
+    fontFamily: 'Poppins-Light',
+  },
+  Bold: {
+    fontFamily: 'Poppins-Bold',
+  },
 });
 
 export default GlobalStyle;
