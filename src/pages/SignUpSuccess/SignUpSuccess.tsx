@@ -1,12 +1,19 @@
-import {SignUpSuccessImg} from 'assets';
-import {Button} from 'components';
 import React from 'react';
 import {View, Text} from 'react-native';
+import {SignUpSuccessImg} from 'assets';
+import {Button} from 'components';
 import colors from 'utils/styles/colors';
 import GlobalStyle from 'utils/styles/global_styles';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from 'router/*';
 
 const SignUpSuccess = () => {
+  const {navigation} =
+    useNavigation<
+      NativeStackScreenProps<RootStackParamList, 'SignUpSuccess'>
+    >();
   return (
     <View style={GlobalStyle.RootContainer}>
       <View style={styles.container}>
@@ -21,7 +28,9 @@ const SignUpSuccess = () => {
           <Button
             label="Find Foods"
             color={colors.secondary}
-            onPress={() => {}}
+            onPress={() => {
+              navigation.replace('TabStackScreen');
+            }}
           />
         </View>
       </View>

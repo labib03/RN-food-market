@@ -4,12 +4,14 @@ import {
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
 import {
+  Home,
   SignIn,
   SignUp,
   SignUpAddress,
   SignUpSuccess,
   SplashScreen,
 } from 'pages/index';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -17,6 +19,7 @@ export type RootStackParamList = {
   SignUp: undefined;
   SignUpAddress: undefined;
   SignUpSuccess: undefined;
+  TabStackScreen: undefined;
 };
 
 const options: NativeStackNavigationOptions = {
@@ -26,8 +29,19 @@ const options: NativeStackNavigationOptions = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Router = () => {
+const Tab = createBottomTabNavigator();
+
+const TabNavigation = () => {
   return (
+    <Tab.Navigator initialRouteName="Home">
+      <Tab.Screen name="Home" component={Home} />
+    </Tab.Navigator>
+  );
+};
+
+const RootStackNavigation = () => {
+  return (
+    // <NavigationContainer>
     <Stack.Navigator initialRouteName="SplashScreen">
       <Stack.Screen
         name="SplashScreen"
@@ -46,8 +60,14 @@ const Router = () => {
         component={SignUpSuccess}
         options={options}
       />
+      <Stack.Screen
+        name="TabStackScreen"
+        component={TabNavigation}
+        options={options}
+      />
     </Stack.Navigator>
+    // </NavigationContainer>
   );
 };
 
-export default Router;
+export default RootStackNavigation;
