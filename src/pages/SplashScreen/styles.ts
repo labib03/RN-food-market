@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
 import scaling from '../../config/scaling';
+import colors from 'theme/styles/colors';
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#FFC700',
+    backgroundColor: colors.primary,
     flex: scaling(1),
     height: '100%',
     justifyContent: 'center',

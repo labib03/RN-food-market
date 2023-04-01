@@ -14,6 +14,7 @@ import {
   SplashScreen,
 } from 'pages/index';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {BottomTabComponent} from 'components';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -41,7 +42,9 @@ const Tab = createBottomTabNavigator<TabStackParamsList>();
 
 const TabNavigation = () => {
   return (
-    <Tab.Navigator initialRouteName="Home">
+    <Tab.Navigator
+      initialRouteName="Home"
+      tabBar={props => <BottomTabComponent {...props} />}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Order" component={Order} />
       <Tab.Screen name="Profile" component={Profile} />

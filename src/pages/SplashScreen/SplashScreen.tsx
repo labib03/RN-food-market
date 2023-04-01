@@ -5,19 +5,20 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {SplashScreenLogo} from '../../assets';
 import styles from './styles';
 import {RootStackParamList} from 'router/*';
+import colors from 'theme/styles/colors';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SplashScreen'>;
 
 const SplashScreen: React.FC<Props> = ({navigation}) => {
   React.useEffect(() => {
     setTimeout(() => {
-      navigation.replace('SignIn');
+      navigation.replace('TabStackScreen');
     }, 2000);
   }, []);
 
   return (
     <View style={styles.wrapper}>
-      <StatusBar hidden />
+      <StatusBar backgroundColor={colors.primary} />
       <SplashScreenLogo />
       <Text style={styles.text}>Food Market</Text>
     </View>
