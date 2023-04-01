@@ -8,7 +8,7 @@ import {RootStackParamList} from 'router/*';
 import colors from 'theme/styles/colors';
 import GlobalStyle from 'theme/styles/global_styles';
 
-type Props = NativeStackScreenProps<RootStackParamList>;
+type Props = NativeStackScreenProps<RootStackParamList, 'SignUpSuccess'>;
 
 const SignUpSuccess: React.FC<Props> = ({navigation}) => {
   return (

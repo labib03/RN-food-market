@@ -5,6 +5,8 @@ import {
 } from '@react-navigation/native-stack';
 import {
   Home,
+  Order,
+  Profile,
   SignIn,
   SignUp,
   SignUpAddress,
@@ -29,12 +31,20 @@ const options: NativeStackNavigationOptions = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Tab = createBottomTabNavigator();
+type TabStackParamsList = {
+  Home: undefined;
+  Order: undefined;
+  Profile: undefined;
+};
+
+const Tab = createBottomTabNavigator<TabStackParamsList>();
 
 const TabNavigation = () => {
   return (
     <Tab.Navigator initialRouteName="Home">
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Order" component={Order} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 };
