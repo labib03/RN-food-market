@@ -2,11 +2,11 @@ import React from 'react';
 import {View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-import GlobalStyle from 'utils/styles/global_styles';
+import GlobalStyle from 'theme/styles/global_styles';
 import {Button, Header, Select, TextInput} from 'components';
-import colors from 'utils/styles/colors';
 import styles from './style';
 import {RootStackParamList} from 'router/*';
+import colors from 'theme/styles/colors';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SignUpAddress'>;
 

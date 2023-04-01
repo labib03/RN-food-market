@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, StyleSheet, Pressable} from 'react-native';
 import scaling from 'config/scaling';
-import colors from 'utils/styles/colors';
+import colors from 'theme/styles/colors';
 
 type Props = {
   color: string | undefined;

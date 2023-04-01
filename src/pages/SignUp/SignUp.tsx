@@ -4,8 +4,8 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 import {Button, Header, TextInput} from 'components';
 import styles from './style';
-import colors from 'utils/styles/colors';
 import {RootStackParamList} from 'router/*';
+import colors from 'theme/styles/colors';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
 

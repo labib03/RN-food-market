@@ -9,6 +9,7 @@
       "pages/*": ["src/pages/*"],
       "redux/*": ["src/redux/*"],
       "router/*": ["src/router"],
+      "theme/*": ["src/theme/*"],
       "utils/*": ["src/utils/*"]
     }
   },

@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {BackIcon} from 'assets';
-import colors from 'utils/styles/colors';
 import scaling from 'config/scaling';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from 'router/*';
 import {useNavigation} from '@react-navigation/native';
+import colors from 'theme/styles/colors';
 
 type Props = {
   title: string;
@@ -21,7 +21,7 @@ const Header: React.FC<Props> = ({title, subtitle, isCanBack}) => {
       <View>
         {isCanBack && (
           <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-            <BackIcon />
+            <BackIcon color={colors.secondary} />
           </Pressable>
         )}
       </View>
