@@ -11,24 +11,33 @@ type Props = {
   title: string;
   subtitle: string;
   isCanBack?: boolean;
+  isRenderImage?: boolean;
 };
 
-const Header: React.FC<Props> = ({title, subtitle, isCanBack}) => {
+const Header: React.FC<Props> = ({
+  title,
+  subtitle,
+  isCanBack,
+  isRenderImage,
+}) => {
   const navigation =
     useNavigation<NativeStackScreenProps<RootStackParamList>['navigation']>();
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.leftItem}>
         {isCanBack && (
           <Pressable style={styles.back} onPress={() => navigation.goBack()}>
             <BackIcon color={colors.secondary} />
           </Pressable>
         )}
+
+        <View>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>{subtitle}</Text>
+        </View>
       </View>
-      <View>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>{subtitle}</Text>
-      </View>
+
+      {isRenderImage && <View style={styles.image} />}
     </View>
   );
 };
@@ -40,21 +49,34 @@ const styles = StyleSheet.create({
     paddingHorizontal: scaling(24),
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  leftItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: scaling(12),
   },
   title: {
     color: colors.text.primary,
     fontSize: scaling(22),
     fontFamily: 'Poppins-Medium',
+    letterSpacing: 0.2,
   },
   subtitle: {
     color: colors.text.secondary,
     fontSize: scaling(14),
     fontFamily: 'Poppins-Light',
+    letterSpacing: 0.7,
   },
   back: {
     padding: scaling(10),
     marginLeft: scaling(-10),
+  },
+  image: {
+    width: scaling(50),
+    height: scaling(50),
+    backgroundColor: colors.primary,
+    borderRadius: scaling(8),
   },
 });
 

@@ -12,7 +12,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'SplashScreen'>;
 const SplashScreen: React.FC<Props> = ({navigation}) => {
   React.useEffect(() => {
     setTimeout(() => {
-      navigation.replace('TabStackScreen');
+      navigation.replace('SignIn');
     }, 2000);
   }, []);
 
