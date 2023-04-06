@@ -2,6 +2,7 @@ const colors = {
   primary: '#FFC700',
   secondary: '#FBC252',
   light: '#F6F5F5',
+  grey: '#8D92A3',
   button: {
     primary: '#FFB100',
     secondary: '#393E46',
