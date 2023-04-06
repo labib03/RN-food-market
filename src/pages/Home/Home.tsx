@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 
-import {Header} from 'components';
+import {FoodSlider, Header} from 'components';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         subtitle="Let's get some foods"
         isRenderImage
       />
-      <Text>Home</Text>
+      <FoodSlider />
     </View>
   );
 };

@@ -12,7 +12,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
 const SignUp: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="Sign Up" subtitle="Register and Eat" isCanBack />
+      <Header title="Sign Up" subtitle="Register and Eat" isRenderBackButton />
       <View style={styles.wrapper}>
         <View style={styles.photoContainer}>
           <View style={styles.photoBorder}>

@@ -18,7 +18,7 @@ const GlobalStyle = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
   },
   Reguler: {
-    fontFamily: 'Poppins-Reguler',
+    fontFamily: 'Poppins-Regular',
   },
   Light: {
     fontFamily: 'Poppins-Light',

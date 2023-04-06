@@ -10,14 +10,14 @@ import colors from 'theme/styles/colors';
 type Props = {
   title: string;
   subtitle: string;
-  isCanBack?: boolean;
+  isRenderBackButton?: boolean;
   isRenderImage?: boolean;
 };
 
 const Header: React.FC<Props> = ({
   title,
   subtitle,
-  isCanBack,
+  isRenderBackButton,
   isRenderImage,
 }) => {
   const navigation =
@@ -25,7 +25,7 @@ const Header: React.FC<Props> = ({
   return (
     <View style={styles.container}>
       <View style={styles.leftItem}>
-        {isCanBack && (
+        {isRenderBackButton && (
           <Pressable style={styles.back} onPress={() => navigation.goBack()}>
             <BackIcon color={colors.secondary} />
           </Pressable>
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     width: scaling(50),
     height: scaling(50),
     backgroundColor: colors.primary,
+    opacity: 0.6,
     borderRadius: scaling(8),
   },
 });

@@ -13,7 +13,11 @@ type Props = NativeStackScreenProps<RootStackParamList, 'SignUpAddress'>;
 const SignUpAddress: React.FC<Props> = ({navigation}) => {
   return (
     <View style={GlobalStyle.RootContainer}>
-      <Header title="Address" subtitle="Make sure it's valid" isCanBack />
+      <Header
+        title="Address"
+        subtitle="Make sure it's valid"
+        isRenderBackButton
+      />
       <View style={GlobalStyle.RootWrapper}>
         <TextInput label="phone no." />
         <TextInput label="address" />
