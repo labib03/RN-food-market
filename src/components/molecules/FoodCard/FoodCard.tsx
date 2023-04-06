@@ -1,7 +1,7 @@
-import {View, Image, StyleSheet, Text, ImageSourcePropType} from 'react-native';
-import React from 'react';
-import {IconStarActive, IconStartInactive} from 'assets';
 import scaling from 'config/scaling';
+import React from 'react';
+import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
+import {Rating} from '../../atoms';
 import colors from 'theme/styles/colors';
 import GlobalStyle from 'theme/styles/global_styles';
 
@@ -17,21 +17,7 @@ const FoodCard: React.FC<Props> = ({image, title, totalActiveStar}) => {
       <Image style={styles.image} source={image} />
       <View style={styles.descWrapper}>
         <Text style={styles.title}>{title}</Text>
-        <View style={styles.ratingWrapper}>
-          <View style={styles.starWrapper}>
-            {[...Array(totalActiveStar)].map((_, idx) => (
-              <View key={idx}>
-                <IconStarActive />
-              </View>
-            ))}
-            {[...Array(5 - totalActiveStar)].map((_, idx) => (
-              <View key={idx}>
-                <IconStartInactive />
-              </View>
-            ))}
-          </View>
-          <Text>4.5</Text>
-        </View>
+        <Rating totalActiveStar={totalActiveStar} />
       </View>
     </View>
   );
@@ -60,8 +46,6 @@ const styles = StyleSheet.create({
   },
   title: {...GlobalStyle.Reguler, fontSize: scaling(16), color: colors.black},
   descWrapper: {padding: scaling(12)},
-  starWrapper: {flexDirection: 'row'},
-  ratingWrapper: {flexDirection: 'row', alignItems: 'center', gap: scaling(8)},
 });
 
 export default FoodCard;

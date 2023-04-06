@@ -1,8 +1,8 @@
 import {ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {FoodCard} from '../../atoms';
 import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4} from 'assets';
 import scaling from 'config/scaling';
+import FoodCard from '../FoodCard/FoodCard';
 
 const FoodSlider = () => {
   return (

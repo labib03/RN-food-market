@@ -5,6 +5,7 @@ import {TabView, SceneMap} from 'react-native-tab-view';
 import {FoodSlider, Header, RenderTabBar} from 'components';
 import colors from 'theme/styles/colors';
 import styles from './style';
+import NewTasteTabs from './components/NewTasteTabs';
 
 const FirstRoute = () => (
   <View style={{flex: 1, backgroundColor: colors.white}} />
@@ -15,7 +16,7 @@ const SecondRoute = () => (
 );
 
 const renderScene = SceneMap({
-  first: FirstRoute,
+  first: NewTasteTabs,
   second: SecondRoute,
   third: FirstRoute,
 });
