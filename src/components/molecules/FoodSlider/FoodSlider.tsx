@@ -18,7 +18,11 @@ const FoodSlider = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {flexDirection: 'row', gap: scaling(24), margin: scaling(24)},
+  container: {
+    flexDirection: 'row',
+    gap: scaling(24),
+    margin: scaling(24),
+  },
 });
 
 export default FoodSlider;
