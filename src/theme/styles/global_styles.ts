@@ -26,6 +26,31 @@ const GlobalStyle = StyleSheet.create({
   Bold: {
     fontFamily: 'Poppins-Bold',
   },
+  heading_2_primary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.black,
+    fontSize: scaling(18),
+  },
+  heading_3_primary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.black,
+    fontSize: scaling(16),
+  },
+  heading_4_primary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.black,
+    fontSize: scaling(14),
+  },
+  heading_4_secondary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.grey,
+    fontSize: scaling(14),
+  },
+  heading_5_secondary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.grey,
+    fontSize: scaling(13),
+  },
 });
 
 export default GlobalStyle;

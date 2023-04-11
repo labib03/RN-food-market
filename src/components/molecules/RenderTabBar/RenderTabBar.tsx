@@ -14,7 +14,7 @@ const RenderTabBar = (props: any) => {
       indicatorStyle={{
         backgroundColor: colors.secondary,
       }}
-      style={{backgroundColor: colors.white}}
+      style={styles.tabContainer}
       tabStyle={styles.tabItem}
       renderLabel={({route, focused}) => (
         <Text style={styles.tabText(focused)}>{route.title}</Text>
@@ -24,6 +24,13 @@ const RenderTabBar = (props: any) => {
 };
 
 const styles = StyleSheet.create({
+  tabContainer: {
+    backgroundColor: colors.white,
+    elevation: 0,
+    shadowColor: colors.light,
+    borderBottomColor: colors.light,
+    borderBottomWidth: scaling(1),
+  },
   tabItem: {
     paddingHorizontal: scaling(4),
     paddingVertical: scaling(4),

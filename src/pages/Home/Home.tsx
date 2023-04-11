@@ -1,24 +1,17 @@
 import React from 'react';
 import {View, useWindowDimensions} from 'react-native';
-import {TabView, SceneMap} from 'react-native-tab-view';
+import {SceneMap, TabView} from 'react-native-tab-view';
 
 import {FoodSlider, Header, RenderTabBar} from 'components';
-import colors from 'theme/styles/colors';
-import styles from './style';
 import NewTasteTabs from './components/NewTasteTabs';
-
-const FirstRoute = () => (
-  <View style={{flex: 1, backgroundColor: colors.white}} />
-);
-
-const SecondRoute = () => (
-  <View style={{flex: 1, backgroundColor: colors.light}} />
-);
+import PopularTabs from './components/PopularTabs';
+import RecommendedTabs from './components/RecommendedTabs';
+import styles from './style';
 
 const renderScene = SceneMap({
   first: NewTasteTabs,
-  second: SecondRoute,
-  third: FirstRoute,
+  second: PopularTabs,
+  third: RecommendedTabs,
 });
 
 const Home = () => {

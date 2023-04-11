@@ -5,7 +5,7 @@ import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import colors from 'theme/styles/colors';
 
-const NewTasteTabs = () => {
+const RecommendedTabs = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={true}>
       <View style={styles.container}>
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NewTasteTabs;
+export default RecommendedTabs;

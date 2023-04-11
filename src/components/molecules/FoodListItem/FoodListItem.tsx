@@ -1,9 +1,18 @@
 import scaling from 'config/scaling';
 import React from 'react';
-import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import colors from 'theme/styles/colors';
 import GlobalStyle from 'theme/styles/global_styles';
 import {Rating} from '../../atoms';
+import {ParamListBase, useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 type Props = {
   imagePath: ImageSourcePropType;
@@ -18,19 +27,26 @@ const FoodListItem: React.FC<Props> = ({
   price,
   totalActiveStar,
 }) => {
+  const navigation =
+    useNavigation<NativeStackScreenProps<ParamListBase>['navigation']>();
+
   return (
-    <View style={styles.container}>
-      <View style={styles.leftContent}>
-        <Image style={styles.image} source={imagePath} />
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate('DetailScreen')}>
+      <View style={styles.container}>
+        <View style={styles.leftContent}>
+          <Image style={styles.image} source={imagePath} />
 
-        <View>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.price}>RP. {price}</Text>
+          <View>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.price}>RP. {price}</Text>
+          </View>
         </View>
-      </View>
 
-      <Rating totalActiveStar={totalActiveStar} />
-    </View>
+        <Rating totalActiveStar={totalActiveStar} />
+      </View>
+    </TouchableOpacity>
   );
 };
 

@@ -8,6 +8,8 @@ import IconProfileActive from './ic_profile_filled.svg';
 import IconProfileInactive from './ic_profile_outlined.svg';
 import IconStarActive from './ic_star_active.svg';
 import IconStartInactive from './ic_star_inactive.svg';
+import IconMinus from './ic_minus.svg';
+import IconPlus from './ic_plus.svg';
 
 export {
   SplashScreenLogo,
@@ -20,4 +22,6 @@ export {
   IconProfileInactive,
   IconStarActive,
   IconStartInactive,
+  IconMinus,
+  IconPlus,
 };

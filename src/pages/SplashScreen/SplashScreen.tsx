@@ -20,7 +20,7 @@ const SplashScreen: React.FC<Props> = ({navigation}) => {
     <View style={styles.wrapper}>
       <StatusBar backgroundColor={colors.primary} />
       <SplashScreenLogo />
-      <Text style={styles.text}>Food Market</Text>
+      <Text style={styles.text}>Gindut Mart</Text>
     </View>
   );
 };

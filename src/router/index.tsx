@@ -4,6 +4,7 @@ import {
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
 import {
+  DetailScreen,
   SignIn,
   SignUp,
   SignUpAddress,
@@ -19,6 +20,7 @@ export type RootStackParamList = {
   SignUpAddress: undefined;
   SignUpSuccess: undefined;
   TabStackScreen: undefined;
+  DetailScreen: undefined;
 };
 
 const options: NativeStackNavigationOptions = {
@@ -51,6 +53,11 @@ const RootStackNavigation = () => {
       <Stack.Screen
         name="TabStackScreen"
         component={BottomTabNavigation}
+        options={options}
+      />
+      <Stack.Screen
+        name="DetailScreen"
+        component={DetailScreen}
         options={options}
       />
     </Stack.Navigator>

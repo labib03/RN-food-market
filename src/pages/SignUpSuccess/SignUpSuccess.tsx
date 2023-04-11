@@ -24,7 +24,7 @@ const SignUpSuccess: React.FC<Props> = ({navigation}) => {
         <View style={styles.buttonWrapper}>
           <Button
             label="Find Foods"
-            color={colors.secondary}
+            color={colors.primary}
             onPress={() => {
               navigation.replace('TabStackScreen');
             }}

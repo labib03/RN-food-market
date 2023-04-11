@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: scaling(10),
   },
   text: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'Poppins-Medium',
     fontSize: scaling(14),
     letterSpacing: 0.5,
   },
