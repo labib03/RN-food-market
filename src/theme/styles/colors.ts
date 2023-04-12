@@ -12,6 +12,7 @@ const colors = {
   text: {
     primary: '#020202',
     secondary: '#8D92A3',
+    green: '#14C38E',
   },
   black: '#020202',
   white: '#fff',

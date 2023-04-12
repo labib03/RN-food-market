@@ -7,6 +7,7 @@ import Home from './Home/Home';
 import Profile from './Profile/Profile';
 import Order from './Order/Order';
 import DetailScreen from './DetailScreen/DetailScreen';
+import OrderSummary from './OrderSummary/OrderSummary';
 
 export {
   SplashScreen,
@@ -18,4 +19,5 @@ export {
   Profile,
   Order,
   DetailScreen,
+  OrderSummary,
 };

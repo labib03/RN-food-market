@@ -1,14 +1,13 @@
 import {FoodItem1, FoodItem2, FoodItem3} from 'assets';
 import {FoodListItem} from 'components';
-import scaling from 'config/scaling';
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import colors from 'theme/styles/colors';
+import {ScrollView, View} from 'react-native';
+import styles from '../style';
 
 const RecommendedTabs = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={true}>
-      <View style={styles.container}>
+      <View style={styles.wrapper}>
         <FoodListItem
           imagePath={FoodItem1}
           title="Food Item 1"
@@ -55,13 +54,5 @@ const RecommendedTabs = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.white,
-    gap: scaling(20),
-    paddingVertical: scaling(20),
-  },
-});
 
 export default RecommendedTabs;

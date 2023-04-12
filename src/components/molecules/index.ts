@@ -4,6 +4,7 @@ import FoodSlider from './FoodSlider/FoodSlider';
 import RenderTabBar from './RenderTabBar/RenderTabBar';
 import FoodCard from './FoodCard/FoodCard';
 import FoodListItem from './FoodListItem/FoodListItem';
+import OrderListItem from './OrderListItem/OrderListItem';
 
 export {
   Header,
@@ -12,4 +13,5 @@ export {
   RenderTabBar,
   FoodCard,
   FoodListItem,
+  OrderListItem,
 };

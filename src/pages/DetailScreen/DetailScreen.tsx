@@ -74,7 +74,9 @@ const DetailScreen = () => {
             <Button
               color={colors.button.primary}
               label="Order Now"
-              onPress={() => {}}
+              onPress={() => {
+                navigation.navigate('OrderSummaryScreen');
+              }}
             />
           </View>
         </View>

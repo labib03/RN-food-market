@@ -18,7 +18,8 @@ type Props = {
   imagePath: ImageSourcePropType;
   title: string;
   price: string;
-  totalActiveStar: number;
+  totalActiveStar?: number;
+  totalItems?: number;
 };
 
 const FoodListItem: React.FC<Props> = ({
@@ -26,6 +27,7 @@ const FoodListItem: React.FC<Props> = ({
   title,
   price,
   totalActiveStar,
+  totalItems,
 }) => {
   const navigation =
     useNavigation<NativeStackScreenProps<ParamListBase>['navigation']>();
@@ -44,7 +46,8 @@ const FoodListItem: React.FC<Props> = ({
           </View>
         </View>
 
-        <Rating totalActiveStar={totalActiveStar} />
+        {totalActiveStar && <Rating totalActiveStar={totalActiveStar} />}
+        {totalItems && <Text style={styles.price}>{totalItems} items</Text>}
       </View>
     </TouchableOpacity>
   );
@@ -55,7 +58,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: scaling(24),
   },
   leftContent: {flexDirection: 'row', alignItems: 'center', gap: scaling(12)},
   image: {width: scaling(60), height: scaling(60)},

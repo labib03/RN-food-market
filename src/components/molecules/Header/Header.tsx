@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     fontSize: scaling(14),
     fontFamily: 'Poppins-Light',
-    letterSpacing: 0.7,
   },
   back: {
     padding: scaling(10),

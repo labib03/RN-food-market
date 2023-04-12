@@ -46,6 +46,11 @@ const GlobalStyle = StyleSheet.create({
     color: colors.grey,
     fontSize: scaling(14),
   },
+  heading_5_primary: {
+    fontFamily: 'Poppins-Regular',
+    color: colors.black,
+    fontSize: scaling(13),
+  },
   heading_5_secondary: {
     fontFamily: 'Poppins-Regular',
     color: colors.grey,

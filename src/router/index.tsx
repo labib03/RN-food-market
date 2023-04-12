@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/native-stack';
 import {
   DetailScreen,
+  OrderSummary,
   SignIn,
   SignUp,
   SignUpAddress,
@@ -21,6 +22,7 @@ export type RootStackParamList = {
   SignUpSuccess: undefined;
   TabStackScreen: undefined;
   DetailScreen: undefined;
+  OrderSummaryScreen: undefined;
 };
 
 const options: NativeStackNavigationOptions = {
@@ -58,6 +60,11 @@ const RootStackNavigation = () => {
       <Stack.Screen
         name="DetailScreen"
         component={DetailScreen}
+        options={options}
+      />
+      <Stack.Screen
+        name="OrderSummaryScreen"
+        component={OrderSummary}
         options={options}
       />
     </Stack.Navigator>
