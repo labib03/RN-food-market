@@ -1,26 +1,25 @@
-import React from 'react';
-import {Text, View} from 'react-native';
 import {ParamListBase, useNavigation} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-
-import {SignUpSuccessImg} from 'assets';
+import {OrderEmptyImg} from 'assets';
 import {Button} from 'components';
+import React from 'react';
+import {Text, View} from 'react-native';
 import colors from 'theme/styles/colors';
 import GlobalStyle from 'theme/styles/global_styles';
 import styles from './style';
 
-const SignUpSuccess = () => {
+const EmptyOrder = () => {
   const navigation =
     useNavigation<NativeStackScreenProps<ParamListBase>['navigation']>();
 
   return (
     <View style={GlobalStyle.RootContainer}>
       <View style={styles.container}>
-        <SignUpSuccessImg />
+        <OrderEmptyImg />
         <View>
-          <Text style={styles.title}>Yeay! Completed</Text>
+          <Text style={styles.title}>Ouch! Hungry</Text>
           <Text style={styles.subtitle}>
-            Now you are able to order some foods as a self reward
+            Seems like you have not ordered any food yet
           </Text>
         </View>
         <View style={styles.buttonWrapper}>
@@ -37,4 +36,4 @@ const SignUpSuccess = () => {
   );
 };
 
-export default SignUpSuccess;
+export default EmptyOrder;
