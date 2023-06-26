@@ -20,6 +20,7 @@ type Props = {
   price: string;
   totalActiveStar?: number;
   totalItems?: number;
+  type: string;
 };
 
 const FoodListItem: React.FC<Props> = ({
@@ -28,9 +29,74 @@ const FoodListItem: React.FC<Props> = ({
   price,
   totalActiveStar,
   totalItems,
+  type,
 }) => {
   const navigation =
     useNavigation<NativeStackScreenProps<ParamListBase>['navigation']>();
+
+  const renderComponent = () => {
+    switch (type) {
+      case 'home':
+        return (
+          <View style={styles.container}>
+            <View style={styles.leftContent}>
+              <Image style={styles.image} source={imagePath} />
+
+              <View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.price}>RP. {price}</Text>
+              </View>
+            </View>
+
+            {totalActiveStar && <Rating totalActiveStar={totalActiveStar} />}
+          </View>
+        );
+      case 'order-summary':
+        return (
+          <View style={styles.container}>
+            <View style={styles.leftContent}>
+              <Image style={styles.image} source={imagePath} />
+
+              <View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.price}>RP. {price}</Text>
+              </View>
+            </View>
+
+            {totalItems && <Text style={styles.price}>{totalItems} items</Text>}
+          </View>
+        );
+      case 'order-in-progress':
+        return (
+          <View style={styles.container}>
+            <View style={styles.leftContent}>
+              <Image style={styles.image} source={imagePath} />
+
+              <View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.price}>RP. {price}</Text>
+              </View>
+            </View>
+          </View>
+        );
+      case 'order-past-order':
+        return (
+          <View style={styles.container}>
+            <View style={styles.leftContent}>
+              <Image style={styles.image} source={imagePath} />
+
+              <View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.price}>RP. {price}</Text>
+              </View>
+            </View>
+
+            {totalItems && <Text style={styles.price}>{totalItems} items</Text>}
+          </View>
+        );
+      default:
+    }
+  };
 
   return (
     <TouchableOpacity
